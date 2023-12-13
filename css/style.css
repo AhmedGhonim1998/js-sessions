@@ -1,0 +1,60 @@
+.animation_example{
+    height: 200px;
+    width: 200px;
+    background-color: #808;
+    transition: 1 all ease-in-out;
+    -webkit-transition: 1 all ease-in-out;
+    -moz-transition: 1 all ease-in-out;
+    -ms-transition: 1 all ease-in-out;
+    -o-transition: 1 all ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: 2s;
+    -webkit-animation: 2s;
+    animation-timing-function: ease-in-out;
+    animation-name: loading_animation;
+    animation-delay: 1s;
+}
+.loading{
+    height: 70px;
+    width: 70px;
+    border: 5px solid #4e4e4e;
+    margin: 20px auto;
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: 1s loading_anime linear infinite;
+    -webkit-animation: 1s loading_anime linear infinite;
+}
+@keyframes loading_anime {
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+@keyframes loading_animation {
+    0%,
+    100%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0px;
+        right: 100px;
+    }
+    50%{
+        right: 100px;
+        bottom: 100%;
+    }
+    75%{
+        bottom: 100%;
+        left: 100%;
+    }    
+}
